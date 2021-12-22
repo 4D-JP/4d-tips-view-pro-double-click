@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="view-pro-double-clicked" uuid="BC87E9881C824F1BADDD2E9D2C03B8C5" collation_locale="ja">
+	<schema name="DEFAULT_SCHEMA"/>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
