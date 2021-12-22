@@ -17,6 +17,8 @@
 Components/4D ViewPro.4dbase/Resources/scripts/utils.js 
 ```
 
+たとえば*On Double Clicked*イベントは，`CellDoubleClick`イベントにバインドされています。
+
 ```js
 Utils.spread.bind(GC.Spread.Sheets.Events.CellDoubleClick, function (event, data) {
     if (data.sheetArea === GC.Spread.Sheets.SheetArea.viewport) {
@@ -27,3 +29,5 @@ Utils.spread.bind(GC.Spread.Sheets.Events.CellDoubleClick, function (event, data
     }
 });
 ```
+
+このイベントはセル・ヘッダー・コーナー上でダブルクリック操作で発生します。このとき，アクティブセルがロックされておらず，編集が許可されていれば，`EditStarting`イベントも発生します。ただし，両イベントは順番に発生するわけではないようです。つまり，ダブルクリックイベントが完了した後に編集イベントが発生するという決まりはありません。
