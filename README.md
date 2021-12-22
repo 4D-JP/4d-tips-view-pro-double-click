@@ -9,7 +9,10 @@
 * [Edit Mode Always](https://www.grapecity.com/spreadjs/docs/v14/online/editmode.html)
 * [Use Click Events](https://www.grapecity.com/spreadjs/docs/v14/online/sceventclick.html)
 
-#### 前提
+#### スクリーンショット
+<img width="603" alt="double-clicked" src="https://user-images.githubusercontent.com/10509075/147033872-df7e0e76-820c-4080-9e1e-454c627b3835.png">
+
+#### 解説
 
 4D View Proエリアのフォームイベントは，SpreadJSの`bind()`で実装されています。
 
@@ -31,8 +34,6 @@ Utils.spread.bind(GC.Spread.Sheets.Events.CellDoubleClick, function (event, data
 ```
 
 このイベントはセル・ヘッダー・コーナー上のダブルクリック操作で発生します。このとき，アクティブセルがロックされておらず，編集が許可されていれば，`EditStarting`イベントも発生します。ただし，両イベントは順番に発生するわけではないようです。つまり，ダブルクリックイベントが完了した後に編集開始イベントが発生するという決まりはありません。したがって，ダブルクリックイベント単体を処理するためには，セルの編集を全面的に禁止する必要があります。その後，セルの編集を開始する場合，ロックを解除し，編集を開始し，編集の終了と同時に再びセルの編集を全面的に禁止することになります。
-
-#### 解説
 
 シート保護を有効にした上ですべてのセルを編集不可に設定します。
 
