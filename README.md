@@ -97,3 +97,12 @@ $code.add("}())")
 
 $value:=$code.eval(Is text)
 ```
+
+編集終了イベントでコールバックメソッドが実行されます。
+
+```4d
+#DECLARE($sender : Object; $args : Object; $name : Text)->$status : Object
+
+$activeCell:=VP Get active cell($name)
+VP SET CELL STYLE($activeCell; New object("locked"; True))
+```
